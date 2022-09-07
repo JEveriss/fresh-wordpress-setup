@@ -1,0 +1,19 @@
+{% block myContent %}
+  <main>
+    {% block name %}
+      {{ include('views/components/lineUp.twig') }}
+    {% endblock %}
+
+    {% block album %}
+      {{ include('views/components/album.twig') }}
+    {% endblock %}
+
+    {% block lyrics %}
+      {{ include('views/components/lyrics.twig') }}
+    {% endblock %}
+    
+    {# {% block review %}
+      {{ include('views/components/review.twig') }}
+    {% endblock %} #}
+  </main>
+{% endblock %}

@@ -1,0 +1,20 @@
+<div class="header">
+  {% block header %}
+  <h1>
+    {{ data.pageTitle }}
+  </h1>
+</div>
+
+<header>
+  <h3>
+    Members
+  </h3>
+  <div>
+    Released:
+    {{ data.releaseDate.day }}
+    {{ data.releaseDate.month }}
+    {{ data.releaseDate.year }}
+  </div>
+</header>
+
+{% endblock %}

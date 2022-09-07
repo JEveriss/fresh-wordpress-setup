@@ -1,0 +1,46 @@
+<h2>
+  {{ data.songTitle }}
+</h2>
+{% block lyrics %}
+  <div>
+    <article>
+      {# You spurn my natural emotions <br />
+      You make me feel like dirt and I'm hurt <br />
+      And if I start a commotion <br />
+      I run the risk of losing you and that's worse<br />
+      <aside>
+        Ever fallen in love with someone <br />
+        Ever fallen in love, in love with someone <br />
+        You shouldn't have fallen in love with<br />
+      </aside>I can't see much of a future <br />
+      Unless we find out what's to blame, what a shame <br />
+      And we won't be together much longer <br />
+      Unless we realize that we are the same<br />
+      <aside>
+        Ever fallen in love with someone <br />
+        Ever fallen in love, in love with someone <br />
+        You shouldn't have fallen in love with<br />
+      </aside>You disturb my natural emotions <br />
+      You make me feel like dirt and I'm hurt<br />
+      And if I start a commotion <br />
+      I'll only end up losing you and that's worse<br />
+      <aside>
+        Ever fallen in love with someone <br />
+        Ever fallen in love, in love with someone <br />
+        You shouldn't have fallen in love with<br />
+      </aside> #}
+    </article>
+    <div>
+      {% block singleImage %}
+        {{
+          include(
+            '/views/utils/imageBlock.twig',
+            {
+              artwork: data.singleImage
+            }
+          )
+        }}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

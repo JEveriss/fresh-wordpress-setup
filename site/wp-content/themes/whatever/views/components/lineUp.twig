@@ -1,0 +1,24 @@
+<div class="lineUp">
+  {% block lineUp %}
+    {% for member in data.members %}
+      <div class="members">
+        {{
+          include(
+            '/views/utils/button.twig',
+            {
+              buttonText: member.memberName
+            }
+          )
+        }}
+        {{
+          include(
+            '/views/utils/button.twig',
+            {
+              buttonAttribute: member.instrument
+            }
+          )
+        }}
+      </div>
+    {% endfor %}
+  {% endblock %}
+</div>

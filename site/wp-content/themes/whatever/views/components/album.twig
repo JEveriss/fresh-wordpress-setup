@@ -1,0 +1,31 @@
+<h3>
+  From the album:
+</h3>
+<div class="album-block">
+  <div class="album-block_left">
+    {% block album %}
+      <details>
+        <summary>
+          <h4>
+            {{ data.albumTitle }}
+          </h4>
+        </summary>
+        <ul>
+          {% for track in data.trackListing %}
+            {{ track.trackNumber }} <details>
+              <summary>
+                {{ track.trackTitle }}
+              </summary>
+            </details>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endblock %}
+  </div>
+
+  <div class="album-block_right">
+    {% block albumImage %}
+      {{ include('/utils/imageBlock.twig', {artwork: data.albumImage}) }}
+    {% endblock %}
+  </div>
+</div>

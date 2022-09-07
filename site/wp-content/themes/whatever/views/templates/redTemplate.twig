@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {{ data.pageTitle }}
+    </title>
+    {{ fn('wp_head') }}
+  </head>
+  <body>
+    <h1>
+      This is the RED template
+    </h1>
+    {% block header %}
+      {{ include('views/components/header.twig') }}
+    {% endblock %}
+
+    {% block myContent %}
+      {{ include('views/components/myContent.twig') }}
+    {% endblock %}
+
+    {% block footer %}
+      {{ include('views/components/footer.twig') }}
+    {% endblock %}
+  </body>
+</html>
